@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+/* 返回页 */
+.back {
+  margin: 10px 0 0 30px;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(196, 108, 108);
+  border-radius: 20px;
+  border-width: 1px;
+}
+
+.back:hover {
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  width: 1200px;
+  height: 570px;
+  /* background-color: pink; */
+  /* border: 2px solid red; */
+  margin: 100px auto 0;
+}
+
+/* 左侧英雄信息导航 */
+.box .nav {
+  background-color: #111d29;
+  width: 200px;
+  height: 100%;
+  color: #7e807d;
+}
+
+.box .nav .min-hero {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 3px solid red;
+  text-align: center;
+}
+
+.box .nav .min-hero img {
+  width: 100px;
+  height: 100px;
+}
+
+.box .nav ul {
+  text-align: center;
+  /* background-color: skyblue; */
+}
+
+.box .nav ul li {
+  height: 40px;
+  line-height: 40px;
+}
+
+.active {
+  border-left: 5px solid skyblue;
+  background-color: #fff;
+}
+
+.box .nav ul li:hover {
+  border-left: 5px solid skyblue;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.right-info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background-color: pink; */
+}
+
+/* 技能框 */
+.skill-box {
+  opacity: 1;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all .5s;
+  /* background-color: skyblue; */
+}
+
+.active-hiden {
+  opacity: 0;
+  z-index: -9999;
+}
+
+
+.skill-box div {
+  padding-top: 10px;
+  background-color: #111d29;
+  margin-left: 20px;
+  width: 186px;
+  text-align: center;
+  color: white;
+  /* background-color: pink; */
+  transition: all .5s;
+}
+
+.skill-box img {
+  width: 100px;
+  height: 100px;
+}
+
+.skill-box div p {
+  font-size: 12px;
+}
+
+.skill-box div .skillInfo {
+  margin-top: 20px;
+  /* background-color: pink; */
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.skill-box div .skill-cost {
+  margin-top: 20px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #1b2128;
+}
+
+
+/* 英雄皮肤盒子 */
+.heroList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  opacity: 0;
+  background-color: darkgray;
+  z-index: -9999;
+}
+
+.active-show {
+  opacity: 1;
+  z-index: 1;
+}
+
+.heroList .heroskin:hover {
+  cursor: pointer;
+  transform: scale(1.1)
+}
+
+.heroList .heroskin {
+  width: 250px;
+  max-height: 200px;
+  margin: 20px;
+  box-shadow: 7px 10px 10px 3px #525252;
+  transition: all .3s;
+}
+
+.heroList .heroskin img {
+  width: 100%;
+  /* height: 50%; */
+}
+
+.heroList .heroskin h2 {
+  margin: 10px 0;
+  font-size: 20px;
+  text-align: center;
+  /* background-color: red; */
+}
+
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  padding: 2px;
+  background-color: darkgray;
+  text-align: center;
+  /* border: 2px solid red; */
+  opacity: 1;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.cardShow {
+  display: block;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .hidden {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background-color: skyblue;
+}
+
+.card .hidden:hover {
+  cursor: pointer;
+  background-color: darkorange;
+}
